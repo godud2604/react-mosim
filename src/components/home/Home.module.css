@@ -1,0 +1,158 @@
+@value makerWhite,makerBlack,makerGrey from '../../common/colors.css';
+
+
+
+.inner {
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+}
+/* common */
+
+
+.nav {
+      color: makerBlack;
+}
+
+/* nav end */
+
+.mainVisual {
+      position: relative;
+      height: 100vh;
+}
+
+.homeBg {
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      /* width: 70%; */
+}
+
+.homeBg img {
+      width: 100%;
+}
+
+.mainVisual .txtBox {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      color: makerWhite;
+}
+
+
+.mainVisual .txtBox h1{
+      font-size: 4rem;
+      font-weight: 700;
+}
+
+.mainVisual .txtBox .sub {
+      margin-top: 1em;
+      font-size: 1.4rem;
+      /* font-weight: 700; */
+      text-align: left;
+      line-height: 2rem;
+      padding-left: 0.5em;
+}
+
+
+/* mainVisual end */
+
+.special {
+      height: 90vh;
+      margin-top: 10em;
+}
+
+.specialTxt {
+      text-align: left;
+      padding-left: 2em;
+}
+
+.special .inner .title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5em;
+}
+
+.special .inner .sub {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      margin-bottom: 4em;
+}
+
+.special .box {
+      width: 20%;
+}
+
+.special .box img {
+      width: 100%;
+}
+
+.special .imgBox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+}
+
+.special .top {
+      margin: 1em 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+}
+
+.special .bottom {
+      font-size: 1rem;
+      line-height: 1.4rem;
+}
+
+
+/* special end */
+
+.hanaCard .inner {
+      display: flex;
+      align-items: center;
+}
+
+.hanaCard .inner img {
+      width: 100%;
+}
+
+.hanaCard .specialBg {
+      width: 50%;
+}
+
+.hanaCard .hanaTxt .title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5em;
+      text-align: left;
+}
+
+.hanaCard .hanaRight {
+      margin: 0 auto;
+}
+
+.hanaImg {
+      padding: 0 1em;
+      margin-bottom: 1em;
+}
+
+.hanaTxt {
+      text-align: left;
+}
+
+.hanaTxt .depth li {
+      margin-bottom: 1em;
+      text-align: left;
+}
+
+.hanaTxt button {
+      margin-top: 2em;
+      background-color: rgb(245, 209, 125);
+      font-size: 1rem;
+      border-radius: 50px;
+      width: 27.5rem;
+      height: 3.5rem;
+      line-height: 2.5rem;
+}
+
+
+/* hanaCard end */
