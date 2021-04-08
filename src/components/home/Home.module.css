@@ -1,53 +1,45 @@
-@value makerWhite,makerBlack,makerGrey from '../../common/colors.css';
+@value black,dark,primary,secondary,tertiary,border,background,white from '../../common/colors.css';
 
+.app {
+      visibility: none;
+}
 
+.nav {
+      display:flex;
+}
 
 .inner {
       width: 1200px;
       margin: 0 auto;
       text-align: center;
 }
-/* common */
 
-
-.nav {
-      color: makerBlack;
-}
-
-/* nav end */
 
 .mainVisual {
+      background-size: cover;
+      background-repeat: no-repeat;
       position: relative;
       height: 100vh;
-}
-
-.homeBg {
-      background-repeat: no-repeat;
-      margin: 0 auto;
-      /* width: 70%; */
-}
-
-.homeBg img {
-      width: 100%;
 }
 
 .mainVisual .txtBox {
       position: absolute;
       top: 40%;
       left: 20%;
-      color: makerWhite;
+      color: white;
 }
 
 
 .mainVisual .txtBox h1{
+      opacity: 0;
       font-size: 4rem;
       font-weight: 700;
 }
 
 .mainVisual .txtBox .sub {
+      opacity: 0;
       margin-top: 1em;
-      font-size: 1.4rem;
-      /* font-weight: 700; */
+      font-size: 1.3rem;
       text-align: left;
       line-height: 2rem;
       padding-left: 0.5em;
@@ -57,29 +49,32 @@
 /* mainVisual end */
 
 .special {
-      height: 90vh;
+      overflow: hidden;
+      height: 110vh;
       margin-top: 10em;
 }
 
 .specialTxt {
       text-align: left;
-      padding-left: 2em;
 }
 
 .special .inner .title {
+      color: dark;
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 1.5em;
 }
 
 .special .inner .sub {
+      color: primary;
       font-size: 1rem;
-      line-height: 1.4rem;
-      margin-bottom: 4em;
+      line-height: 1.5;
+      margin-bottom: 2em;
 }
 
 .special .box {
       width: 20%;
+      overflow: hidden;
 }
 
 .special .box img {
@@ -90,25 +85,77 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 4em;
+}
+
+.special .box {
+      position: relative;
+      color: white;
+}
+
+.special .box:hover .img img {
+      transition: all 0.5s ease;
+      transform: scale(1.3);
+}
+
+.special .box:hover .subBox {
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 40%;
+      opacity: 1;
+      z-index: 10;
+}
+
+.special .box:hover .bottom {
+      opacity: 1;
+}
+
+.special .box:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: black;
+      opacity: 0.5;
+}
+
+
+
+.special .subBox {
+      position: absolute;
+      top:81%;
+      width: 100%;
 }
 
 .special .top {
       margin: 1em 0;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
+      line-height: 1.5;
 }
 
 .special .bottom {
-      font-size: 1rem;
+      opacity: 0;
+      font-size: 0.9rem;
       line-height: 1.4rem;
 }
 
 
+
 /* special end */
+
+.hanaCard {
+      overflow: hidden;
+      height: 70vh;
+      background-color: background;
+}
 
 .hanaCard .inner {
       display: flex;
       align-items: center;
+      height: 100%;
 }
 
 .hanaCard .inner img {
@@ -116,10 +163,11 @@
 }
 
 .hanaCard .specialBg {
-      width: 50%;
+      width: 43%;
 }
 
 .hanaCard .hanaTxt .title {
+      color:dark;
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 1.5em;
@@ -130,10 +178,6 @@
       margin: 0 auto;
 }
 
-.hanaImg {
-      padding: 0 1em;
-      margin-bottom: 1em;
-}
 
 .hanaTxt {
       text-align: left;
@@ -144,15 +188,527 @@
       text-align: left;
 }
 
+.hanaTxt .depth01 {
+      color:primary;
+}
+
 .hanaTxt button {
       margin-top: 2em;
-      background-color: rgb(245, 209, 125);
-      font-size: 1rem;
-      border-radius: 50px;
-      width: 27.5rem;
-      height: 3.5rem;
-      line-height: 2.5rem;
 }
+ 
 
 
 /* hanaCard end */
+
+.eco {
+      overflow: hidden;
+      margin-top: 10em;
+}
+
+
+
+.eco .ecoTxt .ecoTitle {
+      color: dark;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5em;
+      text-align: left;
+}
+
+.eco .ecoSub {
+      color: primary;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 4em;
+      text-align: left;
+}
+
+
+.eco {
+      text-align: left;
+}
+
+.eco ul {
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.eco li {
+      width: 17%;
+      margin-bottom: 2em;
+      text-align: left;
+      margin-right: 3em;
+}
+
+
+.eco li img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+}
+
+
+/* eco end */
+
+
+
+/* ///////////////////////////////// 반응형 /////////////////////////////////////// */
+
+@media screen and (max-width:768px) {
+      .inner {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+      }
+      /* common */
+
+      .mainVisual {
+            height: 43vh;
+      }
+
+      
+      .mainVisual .txtBox h1{
+            font-size: 3rem;
+      }
+      
+      .mainVisual .txtBox .sub {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            letter-spacing: 0;
+      }
+      
+      /* mainVisual end */
+
+      .special {
+            height: 124vh;
+            margin-top: 4em;
+      }
+      
+      .specialTxt {
+            padding: 1em;
+      }
+      
+      .special .inner .title {
+            font-size: 1.7rem;
+            margin-bottom: 1em;
+      }
+      
+      .special .inner .sub {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 2em;
+      }
+      
+      .special .box {
+            width: 31%;
+            margin-bottom: 1em;
+      }
+      
+      /* special end */
+
+
+      .hanaCard {
+            height: 88vh;
+      }
+      
+      .hanaCard .inner {
+            display: block;
+      }
+      
+      .hanaCard .inner img {
+            width: 100%;
+      }
+      
+      .hanaCard .specialBg {
+            padding: 3em 1.5em 1em 1.5em;
+            width: 100%;
+      }
+
+      .hanaCard .hanaTxt {
+            text-align: center;
+      }
+      
+      .hanaCard .hanaTxt .title {
+            font-size: 1.7rem;
+            margin-bottom: 1em;
+            padding-left: 1em;
+      }
+
+      .hanaTxt .depth li {
+            margin-bottom: 1em;
+            text-align: left;
+      }
+
+      .hanaTxt .depth01 {
+            padding-left: 2em;
+            font-size: 1rem !important;
+      }
+/* 
+      .hanaTxt button {
+            margin-top: 2em;
+            font-size: 1rem;
+            width: 60%;
+            height: 3.5rem;
+            line-height: 3.5rem;
+      } */
+
+      /* hanaCard end */
+
+
+            
+      .eco {
+            margin-top: 5em;
+      }
+
+      .eco .inner {
+            display: block;
+      }
+
+      .eco .ecoRight {
+            margin-top: 4em;
+            padding: 1.5em;
+            width: 100%;
+      }
+      
+      .eco .ecoTxt {
+            padding-left: 1em;
+      }
+
+      .eco .ecoTxt .ecoTitle {
+            font-size: 1.7rem;
+            margin-bottom: 1em;
+      }
+
+      .eco .ecoSub {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 2em;
+      }
+
+      .eco .ecoLeft {
+            width: 100%;
+      }
+
+
+      .eco {
+            text-align: left;
+      }
+
+      .eco ul {
+            justify-content: center;
+      }
+
+      .eco li {
+            padding: 1em;
+            width: 23%;
+            margin-bottom: 0;
+            margin-right: 0;
+      }
+
+
+      /* eco end */
+
+      .footer {
+            margin-top: 5em;
+            height: fit-content;
+            padding: 2em 0;
+      }
+
+      .footer .inner {
+            display: block;
+      }
+
+      .footer .footerLeft {
+            margin-right: 0em;
+            width: 20%;
+            margin: 0 auto;
+            padding: 1em 0;
+      }
+
+      .footer .footerLeft img {
+            width: 100%;
+      }
+
+      .footer .txt {
+            display: flex;
+            justify-content: center;
+            font-size: 0.9rem;
+      }
+
+      .footer .txt p {
+            position: relative;
+            margin-right: 2em;
+      }
+
+
+      .footer .txt p::after {
+            position: absolute;
+            right: -17px;
+            transform: translateY(-100%);
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background-color: border;
+      }
+
+      .footer .txt .people::after {
+            width: 0;
+      }
+
+      .footer .information ul {
+            justify-content: center;
+            width: 100%;
+            margin-top: 1em;
+      }
+
+      .footer .information li {
+            font-size: 0.7rem;
+            margin-right: 1.3em;
+            margin-bottom: 0.5em;
+      }
+
+      .footer .information .copy {
+            margin-top: 0em;
+      }
+
+      /* footer end */
+
+
+}
+
+
+@media screen and (max-width:414px) {
+
+
+      .mainVisual {
+            width: auto;
+            height: 33vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+      }
+      
+      .mainVisual .txtBox {
+            position: absolute;
+            top: 33%;
+            left: 10%;
+            color: white;
+      }
+      
+      
+      .mainVisual .txtBox h1{
+            font-size: 2rem;
+            font-weight: 700;
+      }
+      
+      .mainVisual .txtBox .sub {
+            margin-top: 0.5em;
+            font-size: 0.8rem;
+            text-align: left;
+            line-height: 1.1rem;
+            letter-spacing: 0.05em;
+            /* padding-left: 0.5em; */
+      }
+      
+      /* mainVisual end */
+
+      .special {
+            height: 101vh;
+            margin-top: 2em;
+      }
+      
+      .specialTxt {
+            padding: 1em;
+      }
+      
+      .special .inner .title {
+            color: dark;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5em;
+      }
+      
+      .special .inner .sub {
+            font-size: 0.7rem;
+            line-height: 1rem;
+            margin-bottom: 2em;
+      }
+      
+      .special .box {
+            width: 31%;
+            margin-bottom: 1em;
+      }
+      
+      /* special end */
+
+
+      .hanaCard {
+            height: 80vh;
+      }
+      
+      .hanaCard .inner {
+            display: block;
+      }
+      
+      .hanaCard .inner img {
+            width: 100%;
+      }
+      
+      .hanaCard .specialBg {
+            padding: 3em 1em 1em 1em;
+            width: 100%;
+      }
+
+      .hanaCard .hanaTxt {
+            text-align: center;
+      }
+      
+      .hanaCard .hanaTxt .title {
+            font-size: 1rem;
+            margin-bottom: 1em;
+            padding-left: 1em;
+      }
+
+      .hanaTxt .depth li {
+            margin-bottom: 1em;
+            text-align: left;
+      }
+
+      .hanaTxt .depth01 {
+            padding-left: 1em;
+            font-size: 0.7rem !important;
+      }
+
+      /* .hanaTxt button {
+            margin-top: 1em;
+            font-size: 0.7rem;
+            width: 40%;
+            height: 2.5rem;
+            line-height: 2.5rem;
+      } */
+
+      /* hanaCard end */
+
+
+            
+      .eco {
+            margin-top: 5em;
+      }
+
+      .eco .inner {
+            display: block;
+      }
+
+      .eco .ecoRight {
+            margin-top: 2em;
+            padding: 1em;
+            width: 100%;
+      }
+      
+      .eco .ecoTxt {
+            padding-left: 1em;
+      }
+
+      .eco .ecoTxt .ecoTitle {
+            font-size: 1rem;
+            margin-bottom: 1em;
+      }
+
+      .eco .ecoSub {
+            font-size: 0.7rem;
+            line-height: 1rem;
+            margin-bottom: 2em;
+      }
+
+      .eco .ecoLeft {
+            width: 100%;
+      }
+
+
+      .eco {
+            text-align: left;
+      }
+
+      .eco ul {
+            justify-content: center;
+      }
+
+      .eco li {
+            padding: 1em;
+            width: 30%;
+            margin-bottom: 0;
+            margin-right: 0;
+      }
+
+
+      /* eco end */
+
+      .footer {
+            margin-top: 5em;
+            height: fit-content;
+            padding-bottom: 1em;
+      }
+
+      .footer .inner {
+            display: block;
+      }
+
+      .footer .footerLeft {
+            margin-right: 0em;
+            width: 30%;
+            margin: 0 auto;
+            padding: 1em 0;
+      }
+
+      .footer .footerLeft img {
+            width: 100%;
+      }
+
+      .footer .txt {
+            display: flex;
+            justify-content: center;
+            font-size: 0.9rem;
+      }
+
+      .footer .txt p {
+            position: relative;
+            margin-right: 2em;
+      }
+
+
+      .footer .txt p::after {
+            position: absolute;
+            right: -17px;
+            transform: translateY(-100%);
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background-color: border;
+      }
+
+      .footer .txt .people::after {
+            width: 0;
+      }
+
+      .footer .information ul {
+            justify-content: center;
+            width: 100%;
+            margin-top: 1em;
+      }
+
+      .footer .information li {
+            font-size: 0.7rem;
+            margin-right: 1.3em;
+            margin-bottom: 0.5em;
+      }
+
+      .footer .information .copy {
+            margin-top: 1em;
+      }
+
+      /* footer end */
+
+
+}

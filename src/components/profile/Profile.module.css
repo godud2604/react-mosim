@@ -1,0 +1,132 @@
+@value black,dark,primary,secondary,tertiary,border,background,white from '../../common/colors.css';
+
+
+.product {
+      width: 1200px;
+      margin: 0 auto;
+      color: secondary;
+      height: 100vh;
+}
+
+.familyBox  {
+      margin: 5em 0 ;
+      line-height: 1.1;
+}
+
+.familyBox .sub {
+      color:primary ;
+}
+
+.familyBox .title {
+      margin: 0.3em 0 1em;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: primary;
+}
+
+.familyBox::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: primary;
+}
+
+.mosimTxt {
+      line-height:1.5;
+      margin-bottom: 3em;
+}
+
+.mosimTxt strong {
+      font-weight: 700;
+      color: primary;
+}
+
+/*  */
+
+
+.flowerBox {
+      margin-top: 5em;
+      display: flex;
+      justify-content: center;
+}
+
+.table {
+      display: table;
+      width: 65%;
+      margin: 0 auto;
+}
+
+
+.flowerBox .img {
+      position: relative;
+      border-radius: 100%;
+      height: 40vh;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+
+.flowerBox .flowerLeft {
+      flex: 1;
+}
+
+.flowerBox .flowerRight {
+      position: relative;
+      flex: 1;
+}
+
+.flowerBox .title {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 900;
+}
+
+.flowerBox .txt {
+      color: white;
+}
+
+.flowerBox .txt li {
+      margin-top: 10px;
+}
+
+.flowerBox .txt .money {
+      margin: 10px 0 40px;
+      font-size: 1.4rem;
+      font-weight: 700;
+}
+
+.flowerBox .des {
+      color: secondary;
+      margin-top: 2em;
+      text-align: center;
+      line-height: 1.5;
+}
+
+/* line 컴포넌트 만들어서 구분짓기. */
+
+/*  */
+
+.mainService {
+      background-color: border;
+}
+
+.mainCover {
+      width: 1200px;
+      margin: 0 auto;
+}
+
+.mainService li {
+      display: flex;
+}
+
+.mainService .photo {
+      flex:1;
+}
+
+.mainService .txtBox {
+      flex:1;
+}

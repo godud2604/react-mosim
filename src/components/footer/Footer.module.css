@@ -1,0 +1,213 @@
+@value black,dark,primary,secondary,tertiary,border,background,white from '../../common/colors.css';
+
+
+.inner {
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+}
+
+
+.footer {
+      margin-top: 10em;
+      background:background;
+      height: 30vh;
+}
+
+.footer .inner {
+      display: flex;
+      align-items: center;
+      height: 100%;
+}
+
+.footer .footerLeft {
+      margin-right: 6em;
+}
+
+.footer .txt {
+      display: flex;
+}
+
+.footer .txt p {
+      position: relative;
+      color: primary;
+      margin-right: 2em;
+}
+
+
+.footer .txt p::after {
+      position: absolute;
+      right: -17px;
+      transform: translateY(-100%);
+      content: '';
+      display: block;
+      width: 1px;
+      height: 15px;
+      background-color: border;
+}
+
+.footer .txt .people::after {
+      width: 0;
+}
+
+.footer .information ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      margin-top: 2em;
+}
+
+.footer .information li {
+      font-size: 0.9rem;
+      color: secondary;
+      margin-right: 1.3em;
+      margin-bottom: 0.5em;
+}
+
+.footer .information .copy {
+      color: tertiary;
+      margin-top: 1em;
+}
+
+/* footer end */
+
+
+/* ///////////////////////////////// 반응형 /////////////////////////////////////// */
+
+@media screen and (max-width:768px) {
+      .inner {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+      }
+      .footer {
+            margin-top: 5em;
+            height: fit-content;
+            padding: 2em 0;
+      }
+
+      .footer .inner {
+            display: block;
+      }
+
+      .footer .footerLeft {
+            margin-right: 0em;
+            width: 20%;
+            margin: 0 auto;
+            padding: 1em 0;
+      }
+
+      .footer .footerLeft img {
+            width: 100%;
+      }
+
+      .footer .txt {
+            display: flex;
+            justify-content: center;
+            font-size: 0.9rem;
+      }
+
+      .footer .txt p {
+            position: relative;
+            margin-right: 2em;
+      }
+
+
+      .footer .txt p::after {
+            position: absolute;
+            right: -17px;
+            transform: translateY(-100%);
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background-color: border;
+      }
+
+      .footer .txt .people::after {
+            width: 0;
+      }
+
+      .footer .information ul {
+            justify-content: center;
+            width: 100%;
+            margin-top: 1em;
+      }
+
+      .footer .information li {
+            font-size: 0.7rem;
+            margin-right: 1.3em;
+            margin-bottom: 0.5em;
+      }
+
+      .footer .information .copy {
+            margin-top: 0em;
+      }
+}
+
+
+@media screen and (max-width:414px) {
+      .footer {
+            margin-top: 5em;
+            height: fit-content;
+            padding-bottom: 1em;
+      }
+
+      .footer .inner {
+            display: block;
+      }
+
+      .footer .footerLeft {
+            margin-right: 0em;
+            width: 30%;
+            margin: 0 auto;
+            padding: 1em 0;
+      }
+
+      .footer .footerLeft img {
+            width: 100%;
+      }
+
+      .footer .txt {
+            display: flex;
+            justify-content: center;
+            font-size: 0.9rem;
+      }
+
+      .footer .txt p {
+            position: relative;
+            margin-right: 2em;
+      }
+
+
+      .footer .txt p::after {
+            position: absolute;
+            right: -17px;
+            transform: translateY(-100%);
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background-color: border;
+      }
+
+      .footer .txt .people::after {
+            width: 0;
+      }
+
+      .footer .information ul {
+            justify-content: center;
+            width: 100%;
+            margin-top: 1em;
+      }
+
+      .footer .information li {
+            font-size: 0.7rem;
+            margin-right: 1.3em;
+            margin-bottom: 0.5em;
+      }
+
+      .footer .information .copy {
+            margin-top: 1em;
+      }
+}

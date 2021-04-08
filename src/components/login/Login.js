@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
 
 const Login = () => {
@@ -6,6 +7,7 @@ const Login = () => {
             <div>
                   <Nav/>
                   Login
+                  <Footer/>
             </div>
       );
 };

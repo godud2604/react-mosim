@@ -11,7 +11,7 @@ const Nav = () => {
                         </Link>
                   </div>
                   <nav>
-                        <Link to="/profile" className={styles.link}>회사소개</Link>
+                        <Link to="/profile" className={styles.link}>상품안내</Link>
                         <Link to="/alliance" className={styles.link}>제휴사</Link>
                         <Link to="/branch" className={styles.link}>지사안내</Link>
                         <Link to="/client" className={styles.link}>고객센터</Link>

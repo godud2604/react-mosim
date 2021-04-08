@@ -1,8 +1,13 @@
-@value makerBlack: black;
-@value makerWhite: white;
-@value makerLightGrey: #e8e7e6;
-@value makerLightPink: #ffeae8;
-@value makerGrey: #626262;
+@value black: #000;
+@value dark: #191a20;
+@value primary: #3f4150;
+@value secondary: #8c8d96;
+@value tertiary: #b2b3b9;
+@value border: #e0e2e7;
+@value background: #f7f8fa;
+@value white: #fff;
+
+
 @value makerGreen: #385461;
 @value makerPink: pink;
 @value makerShadow: rgba(217, 217, 217, 1);
