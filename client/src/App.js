@@ -5,8 +5,8 @@ import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 import Alliance from './components/alliance/Alliance';
 import Branch from './components/branch/Branch';
-import Client from './components/client/Client';
 import Login from './components/login/Login';
+import Question from './components/question/Question';
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
         <Route path="/branch">
           <Branch/>
         </Route>
-        <Route path="/client">
-          <Client/>
+        <Route path="/question">
+          <Question/>
         </Route>
         <Route path="/login">
           <Login/>

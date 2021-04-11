@@ -5,7 +5,7 @@ import SubHeader from '../subHeader/SubHeader';
 
 import sub04 from './sub04.jpg'
 
-const Client = () => {
+const Question = () => {
       return (
             <div>
                   <Nav/>
@@ -18,4 +18,4 @@ const Client = () => {
       );
 };
 
-export default Client;
+export default Question;

@@ -1,12 +1,13 @@
 import React from 'react';
 import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
+import Signup from '../signup/Signup';
 
 const Login = () => {
       return (
             <div>
                   <Nav/>
-                  Login
+                  <Signup/>
                   <Footer/>
             </div>
       );
